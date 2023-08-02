@@ -8,6 +8,8 @@ packages = [{include = "adsepra", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+requests = "^2.31.0"
+pydantic = "^2.1.1"
 
 
 [build-system]
