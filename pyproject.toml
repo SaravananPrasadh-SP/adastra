@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "adsepra"
+version = "0.0.1"
+description = "A Python Wrapper around the Starburst Enterprise REST API for Data Products"
+authors = ["Arne Ottens <arne.ottens@starburst.io>"]
+readme = "README.md"
+packages = [{include = "adsepra", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
