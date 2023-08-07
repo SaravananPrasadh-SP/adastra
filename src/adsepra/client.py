@@ -1,13 +1,15 @@
 import requests
-from pydantic import BaseModel
+from pydantic import BaseModel, PrivateAttr
+from requests import Session
 
 
 class SepClient(BaseModel):
     host: str
     user: str
     token: str
+    _client: Session = PrivateAttr()
 
-    def __int__(self, **data):
+    def __init__(self, **data):
         super().__init__(**data)
         session = requests.Session()
         session.headers.update({
@@ -16,16 +18,16 @@ class SepClient(BaseModel):
             'Authorization': self.token,
             'X-Trino-User': self.user
         })
-        self.client = session
+        self._client = session
 
     def get(self, endpoint: str, params=None):
-        return self.client.get(self.base_url + endpoint, params=params)
+        return self._client.get(self.host + endpoint, params=params)
 
     def post(self, endpoint: str, payload: dict):
-        return self.client.post(self.base_url + endpoint, json=payload)
+        return self._client.post(self.host + endpoint, json=payload)
 
     def put(self, endpoint: str, payload: dict):
-        return self.client.put(self.base_url + endpoint, json=payload)
+        return self._client.put(self.host + endpoint, json=payload)
 
     def delete(self, endpoint: str):
-        return self.client.delete(self.base_url + endpoint)
+        return self._client.delete(self.host + endpoint)

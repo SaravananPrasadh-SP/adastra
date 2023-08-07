@@ -6,7 +6,7 @@ from adsepra.client import SepClient
 
 DATAPRODUCT_API_BASE = '/api/v1/dataProduct'
 PRODUCTS_ENDPOINT = f'{DATAPRODUCT_API_BASE}/products'
-DOMAINS_ENDPOINT = f'f{DATAPRODUCT_API_BASE}/domains'
+DOMAINS_ENDPOINT = f'{DATAPRODUCT_API_BASE}/domains'
 
 
 class Owner(BaseModel):
@@ -14,7 +14,7 @@ class Owner(BaseModel):
     email: str
 
 
-class Column:
+class Column(BaseModel):
     name: str
     type: str
     description: Optional[str] = ''
@@ -27,7 +27,7 @@ class View(BaseModel):
     columns: Optional[List[Column]] = None
 
 
-class DefinitionProperties:
+class DefinitionProperties(BaseModel):
     refresh_interval: str
     incremental_column: Optional[str] = None
 
@@ -54,7 +54,7 @@ class DataProduct(BaseModel):
     relevantLinks: Optional[list[Link]] = None
 
 
-class Domain:
+class Domain(BaseModel):
     id: Optional[str] = None
     name: str
     description: Optional[str] = None
@@ -78,7 +78,7 @@ class DataProductsApiClient(BaseModel):
         res = self.client.get(DOMAINS_ENDPOINT)
         ids = [dp['id'] for domain in res.json() for dp in domain['assignedDataProducts']]
         data_products = [self.get_data_product(uuid) for uuid in ids]
-        data_products
+        return data_products
 
     def list_domains(self):
         res = self.client.get(DOMAINS_ENDPOINT)
@@ -147,7 +147,7 @@ class DataProductsApiClient(BaseModel):
         # warten, bis es tatsächlich gelöscht wurde?
         return res.status_code == 202
 
-    def delete(self, uuid: str) -> bool:
+    def delete_domain(self, uuid: str) -> bool:
         res = self.client.delete(f'{DOMAINS_ENDPOINT}/{uuid}')
         return res.status_code == 204
 
