@@ -4,6 +4,9 @@
     <i align="center">A Python Wrapper around the Starburst Enterprise REST API</i>
 </p>
 
+### Disclaimer
+This is not part of the core Starburst product and is not covered by Starburst Enterprise support agreements. It is a community developed set of scripts to make your life easier when deploying to these cloud environments.
+
 ## Introduction
 This Python package is a wrapper around the Starburst REST API as documented here:
 https://docs.starburst.io/latest/api/index.htm
