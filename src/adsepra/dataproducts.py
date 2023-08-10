@@ -32,7 +32,7 @@ class DefinitionProperties(BaseModel):
     incremental_column: Optional[str] = None
 
 
-class MaterializedView(BaseModel):
+class MaterializedView(View):
     definitionProperties: Optional[DefinitionProperties] = None
 
 
@@ -47,7 +47,7 @@ class DataProduct(BaseModel):
     catalogName: str
     dataDomainId: str
     summary: str
-    description: str
+    description: Optional[str] = ''
     owners: Optional[list[Owner]] = None
     views: Optional[list[View]] = None
     materializedViews: Optional[list[MaterializedView]] = None
@@ -127,7 +127,7 @@ class DataProductsApiClient(BaseModel):
 
     def set_data_product_tags(self, uuid: str, tags: [Tag]):
         payload = [t.model_dump(exclude_none=True) for t in tags]
-        res = self.client.put(f'{PRODUCTS_ENDPOINT}/tags/products/{uuid}', payload)
+        res = self.client.put(f'{DATAPRODUCT_API_BASE}/tags/products/{uuid}', payload)
         return res.status_code == 204
 
     def reassign_data_product_domain(self, product_uuid: str, domain_uuid: str):
