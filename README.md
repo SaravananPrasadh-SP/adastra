@@ -21,7 +21,7 @@ Releases are available on PyPI. Install it using pip:
 
 ```shell
 python -m pip install -U pip
-python -m pip install -U matplotlib
+python -m pip install -U adsepra
 ```
 
 Alternatively you can download the source from GitHub and install it using Poetry:
