@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains/ac837279-65ea-46f8-8b00-0a3d9d0c7291
+  response:
+    body:
+      string: '{"id":"ac837279-65ea-46f8-8b00-0a3d9d0c7291","name":"Test Domain","assignedDataProducts":[],"createdBy":"merlin","createdAt":"2023-08-15T14:28:21.923704Z","updatedAt":"2023-08-15T14:28:21.923704Z","updatedBy":"merlin"}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7f721fa919b61c8b-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '165'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 15 Aug 2023 14:28:22 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ilvCKwXDRwirz%2F6ZFK13Mg3%2BaBQknYkTzVOPfKb6JNsTju0rO22wWtHdlCTAmIGjrRgayRyMOMVLC%2BAc4OjiuijjxJBiYcQEOHp%2FKEhl0WtXjvuMxJaI1hSc2%2F0L5awBoWSw5pvx1Hs%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 200
+      message: OK
+version: 1

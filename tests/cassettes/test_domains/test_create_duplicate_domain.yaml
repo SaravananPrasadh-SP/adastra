@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: '{"name": "Test Domain"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '23'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: POST
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains
+  response:
+    body:
+      string: '{"message":"Attempt to add duplicate data","errorCode":"DUPLICATE_DATA","metadata":{"details":"org.jdbi.v3.core.statement.UnableToExecuteStatementException:
+        org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique
+        constraint \"data_domain_unique\"\n  Detail: Key (name)=(Test Domain) already
+        exists. [statement:\"INSERT INTO data_domain (id, name, description, created_by,
+        created_at, updated_at, updated_by, schema_location) VALUES (:id, :name, :description,
+        :createdBy, :createdAt, :updatedAt, :updatedBy, :schemaLocation)\", arguments:{positional:{},
+        named:{}, finder:[{lazy bean property arguments \"DataDomainRecord{id=57397f93-de7a-4485-a148-ce0eb3791daf,
+        name=\u0027Test Domain\u0027, description=Optional.empty, createdBy=merlin,
+        createdAt=2023-08-15T14:28:22.316303679Z, updatedAt=2023-08-15T14:28:22.316303679Z,
+        updatedBy=\u0027merlin\u0027, schemaLocation=Optional.empty}\"}]}]"}}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7f721fa7ed12994b-FRA
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '913'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 15 Aug 2023 14:28:22 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nhtuIBpWWD2L7U5DS73QX16G%2Fb6NakywYDb4WBjcH1wgi0IKq4T8vxeZbUO1jc6DYp2gCW0gtSnzKMX8aN1uUukhGcD%2F31rpptLKmjz1zTwdS2zb4ewGZwugUA%2BD%2BXOCCV%2Fnek692eY%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      X-Content-Type-Options:
+      - nosniff
+      X-Insights-Error-Message:
+      - Attempt to add duplicate data
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 409
+      message: Conflict
+version: 1
