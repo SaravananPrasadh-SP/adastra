@@ -1,6 +1,7 @@
 from typing import Optional, List
+from uuid import UUID
 
-from pydantic import BaseModel
+from pydantic import BaseModel, validate_call
 
 from adsepra.client import SepClient
 
@@ -42,7 +43,7 @@ class Link(BaseModel):
 
 
 class DataProduct(BaseModel):
-    id: Optional[str] = None
+    id: Optional[UUID] = None
     name: str
     catalogName: str
     dataDomainId: str
@@ -55,7 +56,7 @@ class DataProduct(BaseModel):
 
 
 class Domain(BaseModel):
-    id: Optional[str] = None
+    id: Optional[UUID] = None
     name: str
     description: Optional[str] = None
     schemaLocation: Optional[str] = None
@@ -67,7 +68,7 @@ class SampleQuery(BaseModel):
 
 
 class Tag(BaseModel):
-    id: Optional[str] = None
+    id: Optional[UUID] = None
     value: str
 
 
@@ -95,22 +96,23 @@ class DataProductsApiClient(BaseModel):
         domain = Domain(**res.json())
         return domain
 
-    def get_data_product(self, uuid: str):
+    def get_data_product(self, uuid: UUID):
         res = self.client.get(f'{PRODUCTS_ENDPOINT}/{uuid}')
         data_product = DataProduct(**res.json())
         return data_product
 
-    def get_data_product_samples(self, uuid: str):
+    def get_data_product_samples(self, uuid: UUID):
         res = self.client.get(f'{PRODUCTS_ENDPOINT}/{uuid}/sampleQueries')
         sq = [SampleQuery(**s) for s in res.json()]
         return sq
 
-    def get_data_product_tags(self, uuid: str):
+    def get_data_product_tags(self, uuid: UUID):
         res = self.client.get(f'{DATAPRODUCT_API_BASE}/tags/products/{uuid}')
         tags = [Tag(**t) for t in res.json()]
         return tags
 
-    def get_domain(self, uuid: str):
+    @validate_call
+    def get_domain(self, uuid: UUID):
         res = self.client.get(f'{DOMAINS_ENDPOINT}/{uuid}')
         domain = Domain(**res.json())
         return domain
@@ -120,17 +122,17 @@ class DataProductsApiClient(BaseModel):
         data_product = DataProduct(**res.json())
         return data_product
 
-    def set_data_product_samples(self, uuid: str, queries: [SampleQuery]):
+    def set_data_product_samples(self, uuid: UUID, queries: [SampleQuery]):
         payload = [sq.model_dump(exclude_none=True) for sq in queries]
         res = self.client.put(f'{PRODUCTS_ENDPOINT}/{uuid}/sampleQueries', payload)
         return res.status_code == 204
 
-    def set_data_product_tags(self, uuid: str, tags: [Tag]):
+    def set_data_product_tags(self, uuid: UUID, tags: [Tag]):
         payload = [t.model_dump(exclude_none=True) for t in tags]
         res = self.client.put(f'{DATAPRODUCT_API_BASE}/tags/products/{uuid}', payload)
         return res.status_code == 204
 
-    def reassign_data_product_domain(self, product_uuid: str, domain_uuid: str):
+    def reassign_data_product_domain(self, product_uuid: UUID, domain_uuid: UUID):
         res = self.client.post(f'{PRODUCTS_ENDPOINT}/reassignDomain', {
             'dataProductsIds': [product_uuid],
             'newDomainId': domain_uuid
@@ -142,15 +144,18 @@ class DataProductsApiClient(BaseModel):
         domain = Domain(**res.json())
         return domain
 
-    def delete_data_product(self, uuid: str) -> bool:
+    @validate_call
+    def delete_data_product(self, uuid: UUID) -> bool:
         res = self.client.post(f'{PRODUCTS_ENDPOINT}/{uuid}/workflows/delete', None)
         # warten, bis es tatsächlich gelöscht wurde?
         return res.status_code == 202
 
-    def delete_domain(self, uuid: str) -> bool:
+    @validate_call
+    def delete_domain(self, uuid: UUID) -> bool:
         res = self.client.delete(f'{DOMAINS_ENDPOINT}/{uuid}')
         return res.status_code == 204
 
-    def publish_data_product(self, uuid: str):
+    @validate_call
+    def publish_data_product(self, uuid: UUID):
         res = self.client.post(f'{PRODUCTS_ENDPOINT}/{uuid}/workflows/publish', None)
         return res.status_code == 202
