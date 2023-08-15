@@ -24,12 +24,17 @@ def test_create_domain(request, client):
 @pytest.mark.vcr
 @pytest.mark.parametrize('name', [
     None,
-    '',
-    'Test Domain'  # Duplicate
+    ''
 ])
 def test_create_invalid_domain(client, name):
     with pytest.raises(HTTPError):
         client.create_domain(Domain.model_construct(name=name))
+
+
+@pytest.mark.vcr
+def test_create_duplicate_domain(client):
+    with pytest.raises(HTTPError):
+        client.create_domain(Domain.model_construct(name='Test Domain'))
 
 
 @pytest.mark.vcr
@@ -49,9 +54,15 @@ def test_get_domain(request, client):
     '',
     'abc'
 ])
-def test_get_invalid_domain(client, uuid):
+def test_get_domain_with_invalid_id(client, uuid):
     with pytest.raises(ValidationError):
         client.get_domain(uuid)
+
+
+@pytest.mark.vcr
+def test_get_domain_with_non_existing_id(client):
+    domain = client.get_domain('11111111-1111-1111-1111-111111111111')
+    assert domain is None
 
 
 @pytest.mark.vcr
@@ -68,7 +79,33 @@ def test_update_domain(request, client):
 
 
 @pytest.mark.vcr
-def test_delete_valid_domain(request, client):
+@pytest.mark.parametrize('uuid', [
+    None,
+    '',
+    'abc'
+])
+def test_update_domain_with_invalid_id(request, client, uuid):
+    domain = request.config._data['domain'].model_copy(update={'id': uuid})
+    with pytest.raises(ValidationError):
+        client.update_domain(domain)
+
+
+@pytest.mark.vcr
+def test_update_domain_with_non_existing_id(request, client):
+    domain = request.config._data['domain'].model_copy(update={'id': '11111111-1111-1111-1111-111111111111'})
+    assert not client.update_domain(domain)
+
+
+@pytest.mark.vcr
+def test_update_domain_name(request, client):
+    """Changed name should be ignored"""
+    domain = request.config._data['domain'].model_copy(update={'name': 'Name Changed'})
+    domain = client.update_domain(domain)
+    assert domain.name == 'Test Domain'
+
+
+@pytest.mark.vcr
+def test_delete_domain(request, client):
     domain = request.config._data['domain']
     assert domain in client.list_domains()
 
@@ -82,6 +119,11 @@ def test_delete_valid_domain(request, client):
     '',
     'abc'
 ])
-def test_delete_invalid_domain(client, uuid):
-    """The HTTP Response should be 404 / 405 and the wrapper shall return None"""
-    assert not client.delete_domain(uuid)
+def test_delete_domain_with_invalid_id(client, uuid):
+    with pytest.raises(ValidationError):
+        client.delete_domain(uuid)
+
+
+@pytest.mark.vcr
+def test_delete_with_non_existing_id(client):
+    assert not client.delete_domain('11111111-1111-1111-1111-111111111111')
