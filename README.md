@@ -17,14 +17,14 @@ Therefore, I wanted to try it out myself in a small project.
 I quickly saw the need to wrap the actual API into easy to use functions and this library is the result.
 
 ## Installation
-Releases are available on PyPI. Install it using pip:
+Releases are not yet available on PyPI. Install it using pip:
 
 ```shell
 python -m pip install -U pip
-python -m pip install -U adsepra
+python -m pip install -U pip install git+https://github.com/ottensa/ad-sepra.git
 ```
 
-Alternatively you can download the source from GitHub and install it using Poetry:
+Alternatively you can download the source from GitHub and install it using Poetry: tbd
 
 ```shell
 git clone ...
