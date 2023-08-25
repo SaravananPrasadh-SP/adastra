@@ -4,7 +4,7 @@ version = "0.0.1"
 description = "A Python Wrapper around the Starburst REST APIs"
 authors = ["Arne Ottens <arne.ottens@starburst.io>"]
 readme = "README.md"
-packages = [{include = "adsepra", from = "src"}]
+packages = [{include = "adastra", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
