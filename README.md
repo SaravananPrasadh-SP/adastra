@@ -10,7 +10,9 @@ It is a community developed set of scripts to make your life easier when working
 
 ## Introduction
 This Python package is a wrapper around the Starburst REST API as documented here:
-https://docs.starburst.io/latest/api/index.htm
+
+* Starburst Enterprise: https://docs.starburst.io/latest/api/index.htm
+* Starburst Galaxy: https://galaxy.starburst.io/public-api
 
 The motivation behind this project comes from the demand I see at customers to use the API for automation purposes.
 However, working with the _raw_ API is not as easy as it might sound in theory.
@@ -22,23 +24,37 @@ Releases are not yet available on PyPI, but you can install using pip nonetheles
 
 ```shell
 python -m pip install -U pip
-python -m pip install -U pip install git+https://github.com/ottensa/ad-sepra.git
+python -m pip install -U pip install git+https://github.com/ottensa/ad-astra.git
 ```
 
 ## Usage
-ad sepra allows you to interact easily with the Starburst Enterprise REST API.
+*ad astra* allows you to interact easily with the Starburst Enterprise REST API.
 It abstracts away the complexity of the _raw_ API.
 
 ```python
-from adsepra import SepClient, DataProductsApiClient
-client = SepClient(host='https://sep.example.org', user='alice', token='Basic: xyz')
-dpc = DataProductsApiClient(client=client)
-dpc.list_data_products()
+# Starburst Galaxy
+from adastra.client import GalaxyClient
+client = GalaxyClient(host='https://example.galaxy.starburst.io', client_id='clientid', client_secret='clientsecret')
+data_products_service = client.data_product_service()
+list_of_data_products = data_products_service.list()
+...
+
+# Starburst Enterprise
+from adastra.client import SepClient
+client = SepClient(host='https://sep.example.com', user='someuser', token='Some: Token')
+data_products_service = client.data_product_service()
+list_of_data_products = data_products_service.list()
 ```
 
 ## Known issues and limitations
 * This package does not claim to be complete and currently only focuses on Data Products.
 * It has only be tested with Basic Authentication so far.
+
+## About the name
+_ad astra_ is Latin and means _to the stars_. 
+That is already a great name for something in the context of Starburst with its space theme.
+And it gets even better as it forms a nice acronym as well: `ad a STarburst Rest Api` or `to a Starburst Rest Api`
+What could be a better name for something that lets you connect to a Starburst REST API? :smile:
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. 

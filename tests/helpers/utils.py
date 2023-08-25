@@ -1,4 +1,4 @@
-from adsepra.dataproducts import DataProduct, Owner, View
+from adastra.sep.models import DataProduct, Owner, View
 
 valid_product = DataProduct(
     name='Test Product',
