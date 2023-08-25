@@ -52,8 +52,12 @@ list_of_data_products = data_products_service.list()
 
 ## About the name
 _ad astra_ is Latin and means _to the stars_. 
+
 That is already a great name for something in the context of Starburst with its space theme.
-And it gets even better as it forms a nice acronym as well: `ad a STarburst Rest Api` or `to a Starburst Rest Api`
+And it gets even better as it forms a nice acronym as well: 
+
+`ad a STarburst Rest Api` or `to a Starburst Rest Api`
+
 What could be a better name for something that lets you connect to a Starburst REST API? :smile:
 
 ## Contributing
