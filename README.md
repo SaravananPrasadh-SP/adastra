@@ -5,7 +5,8 @@
 </p>
 
 ### Disclaimer
-This is not part of the core Starburst product and is not covered by Starburst Enterprise support agreements. It is a community developed set of scripts to make your life easier when deploying to these cloud environments.
+This is not part of the core Starburst product and is not covered by Starburst Enterprise support agreements. 
+It is a community developed set of scripts to make your life easier when working with Starburst APIs.
 
 ## Introduction
 This Python package is a wrapper around the Starburst REST API as documented here:
