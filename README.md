@@ -1,7 +1,7 @@
 <p align="center">
     <img height="100" alt="ad sepra" src="https://github.com/ottensa/ad-sepra/blob/main/docs/logo.png?raw=true" />
     <br>
-    <i align="center">A Python Wrapper around the Starburst Enterprise REST API</i>
+    <i align="center">A Python Wrapper around the Starburst REST APIs</i>
 </p>
 
 ### Disclaimer
