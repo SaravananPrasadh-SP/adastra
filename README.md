@@ -22,7 +22,7 @@ Releases are not yet available on PyPI, but you can install using pip nonetheles
 
 ```shell
 python -m pip install -U pip
-python -m pip install -U pip install git+https://github.com/ottensa/adsepra.git
+python -m pip install -U pip install git+https://github.com/ottensa/ad-sepra.git
 ```
 
 ## Usage
