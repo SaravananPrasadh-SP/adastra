@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/products/ae5d81d8-bda3-4cfc-9354-ad2d26f74591/sampleQueries
+  response:
+    body:
+      string: '[{"name":"Row filter country = FRANCE , richard p","query":"select
+        nation,sum(revenue) from \ndata_products.federation_sample_product.returned_item_reporting_query\ngroup
+        by 1"},{"name":"Total Per Nation","query":"select nation,sum(revenue) from
+        \ndata_products.federation_sample_product.returned_shipments\ngroup by 1\n"}]
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc485bf3fd13604-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '195'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 25 Aug 2023 14:28:36 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nF4T%2BxvF7Hah%2FIx%2FeL3z7M6R7XJX3m9Q2g3zskoV2uQFqcktjonNGTQAn1nw9zXuLunrACO4tLCmOrQNP%2B29vf%2FGhegBEnvws5EUqRc%2F1%2BPTADJILmOGEHCawZJdg6tzTzJ1dqzLmds%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      alt-svc:
+      - h3=":443"; ma=86400
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

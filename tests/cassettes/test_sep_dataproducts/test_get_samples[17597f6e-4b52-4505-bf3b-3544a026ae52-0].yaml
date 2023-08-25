@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/products/17597f6e-4b52-4505-bf3b-3544a026ae52/sampleQueries
+  response:
+    body:
+      string: '[]
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc485be7fc41952-FRA
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '3'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 25 Aug 2023 14:28:36 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PHl3%2FOxpBstW99rsuGbP8Rtglb19nCCYYEYtGMBFo4TIvb0KiHcEU3E8cGm5rosBX5YlDlEtlLdElN2pRERR7xq66Sh7j1fBgtwbA85hTA4fHfxfJ4AhTsMPSEVriXTWGoQ3wTwgX84%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      alt-svc:
+      - h3=":443"; ma=86400
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+version: 1

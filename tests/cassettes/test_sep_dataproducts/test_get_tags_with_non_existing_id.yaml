@@ -1,0 +1,54 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/tags/products/11111111-1111-1111-1111-111111111111
+  response:
+    body:
+      string: '{"errorCode":"ENTITY_NOT_FOUND","message":"Data product not found","details":{"type":"EntityIdentifier","entityType":"DATA_PRODUCT","entityId":"11111111-1111-1111-1111-111111111111","type":"EntityIdentifier"},"detailsType":"EntityIdentifier"}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc4891f7c86bb4a-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 25 Aug 2023 14:30:54 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ci%2FU6w1G4HNWZEbl%2BP7DKdtPYVIimLT7L8U5cWXk5dN8NX7FedtAb7lmTAC%2FyfZSjcgCSaZxfVsDVCsGgzJfr%2FDrkm8s%2FSI8fRMoSgQ%2BivwM5vsl0IbGJR3MBFBWv07JAYWsHXzv0Fo%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Transfer-Encoding:
+      - chunked
+      alt-svc:
+      - h3=":443"; ma=86400
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 404
+      message: Not Found
+version: 1

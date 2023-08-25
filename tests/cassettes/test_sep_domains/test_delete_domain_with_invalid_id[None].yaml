@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: DELETE
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains/None
+  response:
+    body:
+      string: ''
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc49109af2c3666-FRA
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 25 Aug 2023 14:36:18 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vCXGOBDA2NcMw73TCy%2B2oYeLm704I6OkCAAvms6nbh9SwMSviln0Y%2FAc9MPcX3babxjC8q5QlG2WSXE38ZEhBwcSSv7igJ2xBCktg9vO3i64R4N3XvRFipI%2BepIvh5B5ET4ReXjRCd4%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 404
+      message: Not Found
+version: 1

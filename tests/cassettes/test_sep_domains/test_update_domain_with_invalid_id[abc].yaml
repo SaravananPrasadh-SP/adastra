@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: '{"id": "abc", "name": "Test Domain", "description": "Lorem Ipsum"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '66'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: PUT
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains/abc
+  response:
+    body:
+      string: ''
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc49105585135df-FRA
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 25 Aug 2023 14:36:18 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aOFXkXPILs0w%2FuSOXJbgGkDxRlzmJadEQQ%2BNE6ENABXSVwPml25HROJjAbIAFxKeV%2F%2BuSDHbXP6ntPhdjDoC82N5EqXDVHkOC6ka44DVcAUAC5mKfl7ToejtIy16DXPT3LsMIkbfqIw%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 404
+      message: Not Found
+version: 1

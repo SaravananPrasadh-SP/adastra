@@ -1,0 +1,55 @@
+interactions:
+- request:
+    body: '{"name": ""}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '12'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: POST
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains
+  response:
+    body:
+      string: '{"errorCode":"INVALID_ARGUMENT","message":"Invalid value for argument:
+        name: value is required and may not be blank\n"}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc490ffb88f1ca1-FRA
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '120'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 25 Aug 2023 14:36:17 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XV5XDgQBhX2yupHXJ3Dw58IMRFWK7KSs1C%2FjOmBw3JbBGwczxk57T247F%2B9UL%2Fm43prUwJ%2F6s%2B7mXu7a0BEk8pY7rRMahwItMfAEHZZ4tDL9BTybzwp9LLCzHCwolz5oB0BzwSiRzy8%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      alt-svc:
+      - h3=":443"; ma=86400
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 400
+      message: Bad Request
+version: 1

@@ -1,0 +1,50 @@
+interactions:
+- request:
+    body: '{"id": "", "name": "Test Domain", "description": "Lorem Ipsum"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '63'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: PUT
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains/
+  response:
+    body:
+      string: ''
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc49104aa5591d8-FRA
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 25 Aug 2023 14:36:18 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GJpPJ5GAfXfhdHBiuF1283EqlzIFzbQI301xh9b4W%2FwKwWc56WyGLXdgjY0di9leZgLTXv2qHeaM%2BRrCJoOxVT0UtijUhHKvp80EQZk8tgTq5dtc0Nerj6SQx9YqDr7THL2vtXP3nuk%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      allow:
+      - POST,GET,OPTIONS
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 405
+      message: Method Not Allowed
+version: 1

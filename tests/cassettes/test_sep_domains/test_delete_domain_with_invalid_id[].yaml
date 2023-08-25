@@ -1,0 +1,50 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: DELETE
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains/
+  response:
+    body:
+      string: ''
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7fc4910a5f695c26-FRA
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 25 Aug 2023 14:36:18 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=A6ttx1uOy2FN%2BQlBCiOkIU7zED%2B%2FOmHHqv35ZLX4EsWrg0MicEtZ9nSBXZZ6Yf1soVb7Eg9bMSsxIg3OSPXITvCmkfidIn2zbYPnpbS9TKYJaoCDCMONW8muIxP5GZf5lqSBmteDb4k%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      allow:
+      - POST,GET,OPTIONS
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 405
+      message: Method Not Allowed
+version: 1
