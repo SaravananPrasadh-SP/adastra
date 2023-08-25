@@ -5,7 +5,8 @@
 </p>
 
 ### Disclaimer
-This is not part of the core Starburst product and is not covered by Starburst Enterprise support agreements. It is a community developed set of scripts to make your life easier when deploying to these cloud environments.
+This is not part of the core Starburst product and is not covered by Starburst support agreements. 
+It is a community developed set of scripts to make your life easier when working with Starburst APIs.
 
 ## Introduction
 This Python package is a wrapper around the Starburst REST API as documented here:
@@ -17,19 +18,11 @@ Therefore, I wanted to try it out myself in a small project.
 I quickly saw the need to wrap the actual API into easy to use functions and this library is the result.
 
 ## Installation
-Releases are not yet available on PyPI. Install it using pip:
+Releases are not yet available on PyPI, but you can install using pip nonetheless:
 
 ```shell
 python -m pip install -U pip
 python -m pip install -U pip install git+https://github.com/ottensa/ad-sepra.git
-```
-
-Alternatively you can download the source from GitHub and install it using Poetry: tbd
-
-```shell
-git clone ...
-cd ...
-poetry build ...
 ```
 
 ## Usage
@@ -44,7 +37,8 @@ dpc.list_data_products()
 ```
 
 ## Known issues and limitations
-This package does not claim to be complete and currently only focuses on Data Products
+This package does not claim to be complete and currently only focuses on Data Products.
+It has only be tested with Basic Authentication so far.
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. 

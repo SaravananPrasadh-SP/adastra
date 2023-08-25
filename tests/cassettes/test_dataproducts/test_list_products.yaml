@@ -1,0 +1,365 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains
+  response:
+    body:
+      string: '[{"id":"e3ce7749-2548-4dda-931f-6fdf343ec26a","name":"ESG","description":"API
+        generated Domain","schemaLocation":"file:///tmp/","assignedDataProducts":[{"id":"17597f6e-4b52-4505-bf3b-3544a026ae52","name":"Environmental"}],"createdBy":"merlin","createdAt":"2023-08-10T13:44:08.410358Z","updatedAt":"2023-08-10T13:44:08.410358Z","updatedBy":"merlin"},{"id":"c6889a69-353d-4dec-8502-ecbd992c24b9","name":"Customer","schemaLocation":"file:///tmp/","assignedDataProducts":[{"id":"d740a24e-c6e9-4d3f-bf71-63227640143c","name":"Burst
+        Bank Customer"}],"createdBy":"merlin","createdAt":"2023-08-10T13:44:08.555818Z","updatedAt":"2023-08-10T13:44:08.555818Z","updatedBy":"merlin"},{"id":"d8b34c31-dba7-47fd-87ef-73778e2ad675","name":"Meta","description":"Lorem
+        Ipsum","schemaLocation":"file:///tmp/","assignedDataProducts":[{"id":"ae5d81d8-bda3-4cfc-9354-ad2d26f74591","name":"Federation
+        Sample Product"}],"createdBy":"merlin","createdAt":"2023-07-31T20:55:46.973982Z","updatedAt":"2023-07-31T21:03:10.865809Z","updatedBy":"merlin"},{"id":"d10034b4-6ade-48e4-a927-b41fc2c0f05f","name":"Risk","description":"Lorem
+        Ipsum","schemaLocation":"file:///tmp/","assignedDataProducts":[{"id":"602f5a94-de75-4061-befd-5f7fc2aacda4","name":"Regulatory
+        Reporting"}],"createdBy":"merlin","createdAt":"2023-07-31T20:55:46.981126Z","updatedAt":"2023-07-31T21:03:10.873891Z","updatedBy":"merlin"}]
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7f78fe63bc5d9954-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '539'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 16 Aug 2023 10:29:00 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ggRSLYcx0TePqN4Hbllvc3Cd8pSKLECZGhuupQPvx6Ku9fjajqa0lXvIQ6MbGr2nJ%2BtRa2LQSrnOhgGzAY3DU%2FDCanJDwYscG8jVzQmsXtMUIF5u6cBT0HcAaN%2BGbHp7ZzgHYdMmLek%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/products/17597f6e-4b52-4505-bf3b-3544a026ae52
+  response:
+    body:
+      string: '{"id":"17597f6e-4b52-4505-bf3b-3544a026ae52","name":"Environmental","catalogName":"objectstore","schemaName":"environmental","dataDomainId":"e3ce7749-2548-4dda-931f-6fdf343ec26a","summary":"Datasets
+        for Environmental datasets to feed ESG reporting and analysis","description":"#
+        Data Quality Control\n\n![Control](https://tnkxfktfanmo5gdluckw5l745i0nphej.lambda-url.us-east-2.on.aws/?id=1)\n\n#
+        Federated Data Sources\n`Parts  -\u003E SQL Server` \n`Supliers -\u003E Postgres`
+        \n`Geographic  -\u003E  AWS Data Lake` \n\n# ESG\n\n\n![ESG](https://www.saltworkstech.com/wp-content/uploads/2021/07/ESG-Circle-Banner.jpg)","createdBy":"merlin","status":"PUBLISHED","views":[{"name":"precipitations","createdBy":"merlin","definitionQuery":"select
+        * from tpch.tiny.region","status":"PUBLISHED","columns":[{"name":"regionkey","type":"bigint","description":""},{"name":"name","type":"varchar(25)","description":""},{"name":"comment","type":"varchar(152)","description":""}],"markedForDeletion":false,"createdAt":"2023-08-10T14:04:18.257957Z","updatedAt":"2023-08-10T14:04:18.257957Z","updatedBy":"merlin","publishedAt":"2023-08-10T14:04:18.673324Z","publishedBy":"merlin","matchesTrinoDefinition":true},{"name":"temperatures","description":"Global
+        temperatures in regions","createdBy":"merlin","definitionQuery":"select *
+        from tpch.tiny.nation","status":"PUBLISHED","columns":[{"name":"nationkey","type":"bigint","description":""},{"name":"name","type":"varchar(25)","description":""},{"name":"regionkey","type":"bigint","description":""},{"name":"comment","type":"varchar(152)","description":""}],"markedForDeletion":false,"createdAt":"2023-08-10T14:04:18.257957Z","updatedAt":"2023-08-10T14:04:18.257957Z","updatedBy":"merlin","publishedAt":"2023-08-10T14:04:18.715216Z","publishedBy":"merlin","matchesTrinoDefinition":true}],"materializedViews":[],"owners":[{"name":"Victor
+        Coustenoble","email":"victor.coustenoble@starburstdata.com"}],"relevantLinks":[{"label":"ESG
+        Investing (OECD)","url":"https://www.oecd.org/finance/esg-investing.htm"},{"label":"ESG
+        datasets","url":"https://databank.worldbank.org/source/environment-social-and-governance-(esg)-data"},{"label":"European
+        Environment Agency datasets ","url":"https://www.eea.europa.eu/themes/air/data-and-maps/data#c0=5\u0026c11=\u0026c5=all\u0026b_start=0"}],"createdAt":"2023-08-10T14:04:18.257957Z","updatedAt":"2023-08-10T14:07:49.865680Z","updatedBy":"merlin","publishedAt":"2023-08-10T14:04:18.716973Z","publishedBy":"merlin","accessMetadata":{},"ratingsCount":0,"userData":{"isBookmarked":false},"matchesTrinoDefinition":true,"bookmarkCount":0}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7f78fe658c272be6-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1035'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 16 Aug 2023 10:29:00 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hKM8IuR69U5oqDO9MjSzwEUvLLGzk%2BjZdJuKSS1iWar3Z6hbkoXgAlF7uQobANx%2FexyRhwkQ%2BxAQ0bZdxjhFmnVwPu6TTxs8lyRM9%2BtH10h35ZxKFBy3tqzDXpV39oOmHFn8WBDJJGQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/products/d740a24e-c6e9-4d3f-bf71-63227640143c
+  response:
+    body:
+      string: '{"id":"d740a24e-c6e9-4d3f-bf71-63227640143c","name":"Burst Bank Customer","catalogName":"objectstore","schemaName":"burst_bank_customer","dataDomainId":"c6889a69-353d-4dec-8502-ecbd992c24b9","summary":"Customer
+        data for a 360 view","description":"## Data Products in Starburst\nThis Data
+        product helps to simplify the current process and is designed to showcase
+        Starburst\u0027s benefits;\n**Streamlined Visibility.** Quickly understand
+        the usage metrics, and create, publish, find, and manage curated data products
+        based on multiple data sets\n**Consistent Governance.** Secure data products
+        with access control, ensuring consistent governance from source level to data
+        products\n**Ultimate Accessibility.** Query data products that are trusted
+        and approved for frequent business use, rate and share data products internally
+        for use across the organization\n\n\n## The Composition of this Data Product\n![Architecture](https://www.starburst.io/wp-content/uploads/2022/09/sep-how-it-works.png)","createdBy":"merlin","status":"PUBLISHED","views":[{"name":"credit_card_campaign","createdBy":"merlin","definitionQuery":"SELECT
+        * FROM tpch.tiny.customer","status":"PUBLISHED","columns":[],"markedForDeletion":false,"createdAt":"2023-08-10T14:04:18.138141Z","updatedAt":"2023-08-10T14:04:18.138141Z","updatedBy":"merlin","publishedAt":"2023-08-10T14:04:18.517265Z","publishedBy":"merlin","matchesTrinoDefinition":true},{"name":"customer_account_information","createdBy":"merlin","definitionQuery":"SELECT
+        * FROM tpch.tiny.orders","status":"PUBLISHED","columns":[],"markedForDeletion":false,"createdAt":"2023-08-10T14:04:18.138141Z","updatedAt":"2023-08-10T14:04:18.138141Z","updatedBy":"merlin","publishedAt":"2023-08-10T14:04:18.566514Z","publishedBy":"merlin","matchesTrinoDefinition":true}],"materializedViews":[],"owners":[{"name":"Yash
+        Balar","email":"yash.balar@starburstdata.com"},{"name":"Patrick Fremont","email":"patrick.fremont@starburstdata.com"}],"relevantLinks":[],"createdAt":"2023-08-10T14:04:18.138141Z","updatedAt":"2023-08-10T14:07:48.853574Z","updatedBy":"merlin","publishedAt":"2023-08-10T14:04:18.568651Z","publishedBy":"merlin","accessMetadata":{},"ratingsCount":0,"userData":{"isBookmarked":false},"matchesTrinoDefinition":true,"bookmarkCount":0}
+
+        '
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7f78fe67697630d8-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '999'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 16 Aug 2023 10:29:00 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OhmaBv4zhxIGdxN7VtZbonUf1mk0KEwBZf6TOtaKZNT4SKbPMteTRtjLC4fn%2FCtr6ox%2BxQL8Qm%2BJARRT2a2J8T5ZcGLMw0Y9yj9ET8NMaFR8aCMSSHSma%2BWdcyMRpEqqKj2lP%2FuVgGc%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/products/ae5d81d8-bda3-4cfc-9354-ad2d26f74591
+  response:
+    body:
+      string: "{\"id\":\"ae5d81d8-bda3-4cfc-9354-ad2d26f74591\",\"name\":\"Federation
+        Sample Product\",\"catalogName\":\"objectstore\",\"schemaName\":\"federation_sample_product\",\"dataDomainId\":\"d8b34c31-dba7-47fd-87ef-73778e2ad675\",\"summary\":\"The
+        intention of this data product is to give an example of a data product and
+        to show query federation.\",\"description\":\"## Data Quality KPIs Example\\n![KPIs](https://tnkxfktfanmo5gdluckw5l745i0nphej.lambda-url.us-east-2.on.aws/?id=0)\\n\\n##
+        What is data federation?\\nA **federated** database system is a type of meta-database
+        management system, which transparently maps multiple autonomous database systems
+        into a single federated database. The constituent databases are interconnected
+        via a computer network and may be geographically decentralized. Since the
+        constituent database systems remain autonomous, a federated database system
+        is a contrastable alternative to the (sometimes daunting) task of merging
+        several disparate databases. A federated database, or virtual database, is
+        a composite of all constituent databases in a federated database system. There
+        is no actual data integration in the constituent disparate databases as a
+        result of data federation.\\n\\nThrough data abstraction, federated database
+        systems can provide a uniform user interface, enabling users and clients to
+        store and retrieve data from multiple noncontiguous databases with a single
+        query\u2014even if the constituent databases are heterogeneous. To this end,
+        a federated database system must be able to decompose the query into subqueries
+        for submission to the relevant constituent DBMSs, after which the system must
+        composite the result sets of the subqueries. Because various database management
+        systems employ different query languages, federated database systems can apply
+        wrappers to the subqueries to translate them into the appropriate query languages.\\n\\n##
+        The Composition of this Data Product\\n![Architecture](https://drive.google.com/uc?id=1vHD6Wblx-8UNGa_tJmq12Js518KtbYYb)\",\"createdBy\":\"merlin\",\"status\":\"PUBLISHED\",\"views\":[{\"name\":\"customers_at_risk\",\"createdBy\":\"merlin\",\"definitionQuery\":\"SELECT
+        * FROM tpch.tiny.customer\",\"status\":\"PUBLISHED\",\"columns\":[],\"markedForDeletion\":false,\"createdAt\":\"2023-08-10T14:04:18.295275Z\",\"updatedAt\":\"2023-08-10T14:04:18.295275Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.747531Z\",\"publishedBy\":\"merlin\",\"matchesTrinoDefinition\":true},{\"name\":\"high_value_customers\",\"createdBy\":\"merlin\",\"definitionQuery\":\"SELECT
+        * FROM tpch.tiny.lineitem\",\"status\":\"PUBLISHED\",\"columns\":[],\"markedForDeletion\":false,\"createdAt\":\"2023-08-10T14:04:18.295275Z\",\"updatedAt\":\"2023-08-10T14:04:18.295275Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.783474Z\",\"publishedBy\":\"merlin\",\"matchesTrinoDefinition\":true},{\"name\":\"returned_shipments\",\"createdBy\":\"merlin\",\"definitionQuery\":\"SELECT
+        * FROM tpch.tiny.orders\",\"status\":\"PUBLISHED\",\"columns\":[],\"markedForDeletion\":false,\"createdAt\":\"2023-08-10T14:04:18.295275Z\",\"updatedAt\":\"2023-08-10T14:04:18.295275Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.816139Z\",\"publishedBy\":\"merlin\",\"matchesTrinoDefinition\":true}],\"materializedViews\":[],\"owners\":[{\"name\":\"Arne
+        Ottens\",\"email\":\"arne.ottens@starburst.io\"}],\"relevantLinks\":[{\"label\":\"Data
+        Federation\",\"url\":\"https://en.wikipedia.org/wiki/Federated_database_system\"},{\"label\":\"Notebook\",\"url\":\"https://colab.research.google.com/drive/1PHbde40c1Izr20NPoEbNeKjmYr4o9BFy?authuser=1#scrollTo=yazaF5lb-ejW\"},{\"label\":\"Dashboard\",\"url\":\"http://0.0.0.0:3000/dashboard/1-tpch-sample-dashboard\"}],\"createdAt\":\"2023-08-10T14:04:18.295275Z\",\"updatedAt\":\"2023-08-10T14:07:50.779292Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.817271Z\",\"publishedBy\":\"merlin\",\"accessMetadata\":{},\"ratingsCount\":0,\"userData\":{\"isBookmarked\":false},\"matchesTrinoDefinition\":true,\"bookmarkCount\":0}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7f78fe6889f49b2d-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1537'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 16 Aug 2023 10:29:01 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rE4AqCUPPFMyj0L1lKFjNZRCvqp1TgAalzxiNkK04OMKqG9llOm9oIBJTuk4u2596CYRQpP0jEz4mID2W61qW1YWvT0UCRXguA2zivXMCkM1%2FfuvK7xQgO1By9j%2Fe7vbPr974s7%2F4Zw%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Basic bWVybGluOg
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+      X-Trino-User:
+      - merlin
+    method: GET
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/products/602f5a94-de75-4061-befd-5f7fc2aacda4
+  response:
+    body:
+      string: "{\"id\":\"602f5a94-de75-4061-befd-5f7fc2aacda4\",\"name\":\"Regulatory
+        Reporting\",\"catalogName\":\"objectstore\",\"schemaName\":\"regulatory_reporting\",\"dataDomainId\":\"d10034b4-6ade-48e4-a927-b41fc2c0f05f\",\"summary\":\"Regulatorisches
+        Meldewesen und aufsichtsrechtliche Offenlegung werden sich stetig \xE4ndern
+        und erh\xF6hen, was h\xF6here Anforderungen an Institute bedeutet.\",\"description\":\"Mit
+        Blick auf das regulatorische Meldewesen und die aufsichtsrechtliche Offenlegung
+        muss auch weiterhin mit einer stetigen Ver\xE4nderung und Zunahme der Anforderungen
+        an die Institute gerechnet werden.\\n\\nW\xE4hrend auf der einen Seite neue
+        Meldepflichten hinzukommen (z. B. AnaCredit), verringert sich der \u201EBestand\u201C
+        an Meldungen (z. B. Bilanzstatistik oder Millionenkredit) kaum oder nur mit
+        sehr langen \xDCbergangszeitr\xE4umen. Die Herausforderungen stellen sich
+        dabei auf verschiedenen Ebenen:\\n\\n* Fachliche Meldewesen- und Offenlegungsanforderungen\\n*
+        IT- und Datensicht\\n* Kosteneffizienz\",\"createdBy\":\"merlin\",\"status\":\"PUBLISHED\",\"views\":[{\"name\":\"customers\",\"description\":\"List
+        of current customers\",\"createdBy\":\"merlin\",\"definitionQuery\":\"SELECT
+        custkey, name, address, phone, mktsegment FROM \\\"tpch\\\".\\\"tiny\\\".\\\"customer\\\"\",\"status\":\"PUBLISHED\",\"columns\":[{\"name\":\"custkey\",\"type\":\"bigint\",\"description\":\"Customer
+        Identifier\"},{\"name\":\"name\",\"type\":\"varchar(25)\",\"description\":\"Customer
+        Name\"},{\"name\":\"address\",\"type\":\"varchar(40)\",\"description\":\"Customer
+        Address\"},{\"name\":\"phone\",\"type\":\"varchar(15)\",\"description\":\"Customer
+        Phone Number\"},{\"name\":\"mktsegment\",\"type\":\"varchar(10)\",\"description\":\"Customer
+        industry\"}],\"markedForDeletion\":false,\"createdAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.517529Z\",\"publishedBy\":\"merlin\",\"matchesTrinoDefinition\":true},{\"name\":\"order_details\",\"description\":\"Details
+        of all orders\",\"createdBy\":\"merlin\",\"definitionQuery\":\"SELECT orderkey,
+        linenumber, returnflag, linestatus, receiptdate, shipmode FROM \\\"tpch\\\".\\\"tiny\\\".\\\"lineitem\\\"\",\"status\":\"PUBLISHED\",\"columns\":[{\"name\":\"orderkey\",\"type\":\"bigint\",\"description\":\"Order
+        Identifier\"},{\"name\":\"linenumber\",\"type\":\"integer\",\"description\":\"Record
+        Number within order\"},{\"name\":\"returnflag\",\"type\":\"varchar(1)\",\"description\":\"Return
+        Status\"},{\"name\":\"linestatus\",\"type\":\"varchar(1)\",\"description\":\"Line
+        Status\"},{\"name\":\"receiptdate\",\"type\":\"date\",\"description\":\"Date
+        of arrival\"},{\"name\":\"shipmode\",\"type\":\"varchar(10)\",\"description\":\"Type
+        of Transportation\"}],\"markedForDeletion\":false,\"createdAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.591663Z\",\"publishedBy\":\"merlin\",\"matchesTrinoDefinition\":true},{\"name\":\"orders\",\"description\":\"List
+        of all the orders\",\"createdBy\":\"merlin\",\"definitionQuery\":\"SELECT
+        orderkey, custkey, orderstatus, orderdate FROM \\\"tpch\\\".\\\"tiny\\\".\\\"orders\\\"\",\"status\":\"PUBLISHED\",\"columns\":[{\"name\":\"orderkey\",\"type\":\"bigint\",\"description\":\"Order
+        Identifier\"},{\"name\":\"custkey\",\"type\":\"bigint\",\"description\":\"Customer
+        Identifier for that order\"},{\"name\":\"orderstatus\",\"type\":\"varchar(1)\",\"description\":\"Status
+        of the order\"},{\"name\":\"orderdate\",\"type\":\"date\",\"description\":\"Date
+        of the order creation\"}],\"markedForDeletion\":false,\"createdAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.649774Z\",\"publishedBy\":\"merlin\",\"matchesTrinoDefinition\":true},{\"name\":\"suppliers\",\"description\":\"List
+        of suppliers\",\"createdBy\":\"merlin\",\"definitionQuery\":\"SELECT suppkey,
+        name, address, phone FROM \\\"tpch\\\".\\\"tiny\\\".\\\"supplier\\\"\",\"status\":\"PUBLISHED\",\"columns\":[{\"name\":\"suppkey\",\"type\":\"bigint\",\"description\":\"Supplier
+        Identifier\"},{\"name\":\"name\",\"type\":\"varchar(25)\",\"description\":\"Supplier
+        Name \"},{\"name\":\"address\",\"type\":\"varchar(40)\",\"description\":\"Supplier
+        Address\"},{\"name\":\"phone\",\"type\":\"varchar(15)\",\"description\":\"Supplier
+        Phone Number\"}],\"markedForDeletion\":false,\"createdAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.689843Z\",\"publishedBy\":\"merlin\",\"matchesTrinoDefinition\":true}],\"materializedViews\":[],\"owners\":[{\"name\":\"Arne
+        Ottens\",\"email\":\"arne.ottens@starburst.io\"},{\"name\":\"Compliance\",\"email\":\"compliance@acme.com\"}],\"relevantLinks\":[{\"label\":\"Reporting
+        Handbook\",\"url\":\"https://www2.deloitte.com/de/de/pages/risk/solutions/regulatory-reporting.html\"},{\"label\":\"Reporting
+        Dashboard\",\"url\":\"https://www.cappitech.com/wp-content/uploads/2020/03/capptivate-dashboard-673x438.png\"}],\"createdAt\":\"2023-08-10T14:04:18.198614Z\",\"updatedAt\":\"2023-08-10T14:07:51.770701Z\",\"updatedBy\":\"merlin\",\"publishedAt\":\"2023-08-10T14:04:18.690873Z\",\"publishedBy\":\"merlin\",\"accessMetadata\":{},\"ratingsCount\":0,\"userData\":{\"isBookmarked\":false},\"matchesTrinoDefinition\":true,\"bookmarkCount\":0}\n"
+    headers:
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-RAY:
+      - 7f78fe6a8db02c18-FRA
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1504'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 16 Aug 2023 10:29:01 GMT
+      NEL:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lXRAuxOtbtNZGVbPvEMoSh4VTE76G3dfww%2FBjUvm%2BVVwo0fglxXUZGVPz3pZxAzgLCxbMSh1F5PXDgWyyhyD%2BEInpnotru0nzKxbNNkLPgY26vBR67fH%2B2iY4XlOm6yj4TlHcTVRt48%3D"}],"group":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      alt-svc:
+      - h3=":443"; ma=86400
+    status:
+      code: 200
+      message: OK
+version: 1
