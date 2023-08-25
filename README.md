@@ -37,8 +37,8 @@ dpc.list_data_products()
 ```
 
 ## Known issues and limitations
-This package does not claim to be complete and currently only focuses on Data Products.
-It has only be tested with Basic Authentication so far.
+* This package does not claim to be complete and currently only focuses on Data Products.
+* It has only be tested with Basic Authentication so far.
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. 
