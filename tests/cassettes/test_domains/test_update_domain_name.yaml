@@ -1,6 +1,6 @@
 interactions:
 - request:
-    body: '{"id": "ac837279-65ea-46f8-8b00-0a3d9d0c7291", "name": "Name Changed",
+    body: '{"id": "525674f7-15f8-4089-baae-93683b699bb4", "name": "Name Changed",
       "description": "Lorem Ipsum"}'
     headers:
       Accept:
@@ -20,18 +20,18 @@ interactions:
       X-Trino-User:
       - merlin
     method: PUT
-    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains/ac837279-65ea-46f8-8b00-0a3d9d0c7291
+    uri: https://starburst.ottensa.dev/api/v1/dataProduct/domains/525674f7-15f8-4089-baae-93683b699bb4
   response:
     body:
-      string: '{"id":"ac837279-65ea-46f8-8b00-0a3d9d0c7291","name":"Test Domain","description":"Lorem
-        Ipsum","assignedDataProducts":[],"createdBy":"merlin","createdAt":"2023-08-15T14:28:21.923704Z","updatedAt":"2023-08-15T14:28:22.920785Z","updatedBy":"merlin"}
+      string: '{"id":"525674f7-15f8-4089-baae-93683b699bb4","name":"Test Domain","description":"Lorem
+        Ipsum","assignedDataProducts":[],"createdBy":"merlin","createdAt":"2023-08-16T10:29:02.791173Z","updatedAt":"2023-08-16T10:29:03.674662Z","updatedBy":"merlin"}
 
         '
     headers:
       CF-Cache-Status:
       - DYNAMIC
       CF-RAY:
-      - 7f721fac0e9b91f5-FRA
+      - 7f78fe7ce9441e6e-FRA
       Connection:
       - keep-alive
       Content-Encoding:
@@ -39,11 +39,11 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Tue, 15 Aug 2023 14:28:23 GMT
+      - Wed, 16 Aug 2023 10:29:04 GMT
       NEL:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=79T3o5UFRYjfshoaCMKAj7TzM7t1uLtKCkb9qJlAFLEK%2BvZYIqqfkILpODDJdBCBzfpsdPU%2ByELhs%2B8Y%2FI6144YQWZqORsBBkrO8V5U0g6RC1KMfYmHZY9POtjQRli3b7FFH8kS81y4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=g%2FKcYAqOOBxG1MVqIYoN6kNVHpIjbI%2FSmNOFftE2ki7dQw5tvu5zQ0iSdw1K8eLe3ggeGBtkHlnu33D%2FdaMiMQAkvChoCC2iL8wU13Yl7asgT934cAxAwW1UdbGHIXgapMsxSOyoIQw%3D"}],"group":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Transfer-Encoding:

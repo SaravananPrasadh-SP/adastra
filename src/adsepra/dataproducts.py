@@ -55,7 +55,7 @@ class DataProduct(BaseModel):
     id: Optional[UuidStr] = None
     name: str
     catalogName: str
-    dataDomainId: str
+    dataDomainId: UuidStr
     summary: str
     description: Optional[str] = ''
     owners: Optional[list[Owner]] = None
