@@ -5,7 +5,7 @@
 </p>
 
 ### Disclaimer
-This is not part of the core Starburst product and is not covered by Starburst Enterprise support agreements. 
+This is not part of the core Starburst product and is not covered by Starburst support agreements. 
 It is a community developed set of scripts to make your life easier when working with Starburst APIs.
 
 ## Introduction
@@ -18,19 +18,11 @@ Therefore, I wanted to try it out myself in a small project.
 I quickly saw the need to wrap the actual API into easy to use functions and this library is the result.
 
 ## Installation
-Releases are available on PyPI. Install it using pip:
+Releases are not yet available on PyPI, but you can install using pip nonetheless:
 
 ```shell
 python -m pip install -U pip
-python -m pip install -U matplotlib
-```
-
-Alternatively you can download the source from GitHub and install it using Poetry:
-
-```shell
-git clone ...
-cd ...
-poetry build ...
+python -m pip install -U pip install git+https://github.com/ottensa/adsepra.git
 ```
 
 ## Usage
@@ -45,7 +37,8 @@ dpc.list_data_products()
 ```
 
 ## Known issues and limitations
-This package does not claim to be complete and currently only focuses on Data Products
+This package does not claim to be complete and currently only focuses on Data Products.
+It has only be tested with Basic Authentication so far.
 
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. 
