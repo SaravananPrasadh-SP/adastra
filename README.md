@@ -24,7 +24,7 @@ Releases are not yet available on PyPI, but you can install using pip nonetheles
 
 ```shell
 python -m pip install -U pip
-python -m pip install -U pip install git+https://github.com/ottensa/ad-astra.git
+python -m pip install -U pip install git+https://github.com/ottensa/adastra.git
 ```
 
 ## Usage
