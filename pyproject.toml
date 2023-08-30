@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ad-astra"
+name = "adastra"
 version = "0.0.1"
 description = "A Python Wrapper around the Starburst REST APIs"
 authors = ["Arne Ottens <arne.ottens@starburst.io>"]
