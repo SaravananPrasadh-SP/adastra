@@ -5,7 +5,7 @@ from requests import Session
 
 class SepSession(Session):
 
-    def __init__(self, host: str, user: str, token: str):
+    def __init__(self, host: str, user: str, token: str, verify: bool = True):
         super().__init__()
         self.headers.update({
             'Content-Type': 'application/json',
@@ -14,6 +14,7 @@ class SepSession(Session):
             'X-Trino-User': user
         })
         self.sep_host = host
+        self.verify = verify
 
     def request(self, method, url, **kwargs):
         res = super().request(method, self.sep_host + url, **kwargs)
