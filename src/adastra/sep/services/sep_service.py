@@ -5,13 +5,14 @@ from requests import Session
 
 class SepSession(Session):
 
-    def __init__(self, host: str, user: str, token: str, verify: bool = True):
-        super().__init__()
+    def __init__(self, host: str, user: str, token: str, roles = str, verify: bool = True):
+        super().__init__()        
         self.headers.update({
             'Content-Type': 'application/json',
             'Accept': 'application/json',
             'Authorization': token,
-            'X-Trino-User': user
+            'X-Trino-User': user,
+            'X-Trino-Role': f"system:{roles}"
         })
         self.sep_host = host
         self.verify = verify
