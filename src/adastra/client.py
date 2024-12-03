@@ -34,7 +34,7 @@ class GalaxyClient:
 
 
 class SepClient:
-    def __init__(self, host: str, user: str, token: str):
+    def __init__(self, host: str, user: str, token: str, verify: bool = True):
         self._session = SepSession(host=host, user=user, token=token, verify=True)
 
     def domain_service(self) -> DomainService:
