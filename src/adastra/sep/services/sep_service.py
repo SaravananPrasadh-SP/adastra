@@ -12,7 +12,7 @@ class SepSession(Session):
             'Accept': 'application/json',
             'Authorization': token,
             'X-Trino-User': user,
-            'X-Trino-Role': f"system={roles}"
+            'X-Trino-Role': f"system=ROLE{{roles}}"
         })
         self.sep_host = host
         self.verify = verify
