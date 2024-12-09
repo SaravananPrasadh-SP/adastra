@@ -50,7 +50,7 @@ class DataProduct(BaseModel):
     catalogName: str
     dataDomainId: UuidStr
     summary: str
-    status: str
+    status: Optional[str] = None
     description: Optional[str] = ''
     owners: Optional[list[Owner]] = None
     views: Optional[list[View]] = None
